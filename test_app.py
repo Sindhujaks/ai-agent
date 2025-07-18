@@ -10,7 +10,7 @@ load_dotenv()
 class TestSalesCallAssistant(unittest.TestCase):
     def setUp(self):
         """Set up test environment"""
-        self.test_audio_path = "samples/test_sales_call.mp3"
+        self.test_audio_path = "samples/test_web_search_call.mp3"
         self.agent = SalesCallAgent()
 
     def test_transcription(self):
@@ -22,6 +22,7 @@ class TestSalesCallAssistant(unittest.TestCase):
         self.assertIsNotNone(transcription)
         self.assertIsInstance(transcription, str)
         self.assertTrue(len(transcription) > 0)
+        print(transcription)
 
     def test_agent_analysis(self):
         """Test agent's analysis of transcription"""
@@ -31,7 +32,9 @@ class TestSalesCallAssistant(unittest.TestCase):
         to improve efficiency and security.
         """
         
-        summary, action_items = self.agent.process_transcription(test_transcription)
+        output = self.agent.process_transcription(test_transcription)
+        summary = output["summary"]
+        action_items = output["action_items"]
         
         self.assertIsNotNone(summary)
         self.assertIsInstance(summary, str)
