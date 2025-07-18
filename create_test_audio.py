@@ -7,13 +7,24 @@ def create_test_audio():
     """
     # Sample sales conversation
     text = """
-    Hello, this is Sarah from TechSolutions. I wanted to follow up on our previous conversation about upgrading your company's cloud infrastructure.
+    Hi, good afternoon. This is Sindhuja from CloudWorks.
 
-    We've recently launched a new cloud-based platform that can help reduce your operational costs by up to 30%. I noticed that Acme Corp just released their own cloud solution last week, and I thought it would be helpful to compare their features and pricing to ours. Could you look up the latest reviews and comparisons between TechSolutions and Acme Corp's cloud products?
+Yeah, I just got off a call with the CTO of FinNext last week — um, I think his name was Rajiv — and he seemed really interested in moving to a hybrid cloud model. 
 
-    Also, I'd like to schedule a demo to walk you through our platform and answer any questions you might have. Let's set up a meeting for 2025-07-02T15:00:00. Please add this to your calendar.
+He specifically asked about AWS Outposts versus Azure Arc. So, I told him we’d get back with a detailed comparison soon. Can you pull up the key differences between those two platforms?
 
-    Thank you, and I look forward to speaking with you soon!
+Also, I need to set up a follow-up meeting with him. Let’s go ahead and schedule that for Friday, 2:30 PM. Title it ‘FinNext Cloud Proposal Follow-up’.
+
+Oh, and before I forget — I’m also speaking at the Tech Innovations Summit next Monday. Can you check the latest enterprise cloud adoption stats for 2025? I wanna include that in my presentation.
+
+Mmm, yeah — also set a reminder for me tomorrow at 7 PM to send the draft deck to the team, okay?
+
+One more thing — check if any of our competitors have announced new cloud partnerships recently. Anything with AWS or Microsoft?
+
+And finally, ask Gemini to generate a few bullet points I could include in the FinNext proposal — focus mainly on security, scalability, and maybe ease of migration.
+
+Okay, that’s all for now — thanks!
+
     """
     
     # Create samples directory if it doesn't exist
@@ -24,7 +35,7 @@ def create_test_audio():
     tts = gTTS(text=text, lang='en', slow=False)
     
     # Save the file
-    file_path = os.path.join("samples", "test_sales_call.mp3")
+    file_path = os.path.join("samples", "test_sales_call_2.mp3")
     tts.save(file_path)
     print(f"Test audio file created at: {file_path}")
     return file_path

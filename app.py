@@ -10,7 +10,7 @@ load_dotenv()
 
 # Set page config
 st.set_page_config(
-    page_title="AI Sales Call Assistant",
+    page_title="AI Executive Assistant",
     page_icon="🎙️",
     layout="centered"
 )
@@ -89,7 +89,7 @@ def main():
     st.markdown("""
     <div style='display: flex; align-items: center; gap: 1rem; justify-content: center;'>
         <span style='font-size:2.2rem;'>🎙️</span>
-        <span style='font-size:2rem; font-weight: 800; letter-spacing: -1px;'>AI Sales Call Assistant</span>
+        <span style='font-size:2rem; font-weight: 800; letter-spacing: -1px;'>AI Executive Assistant</span>
     </div>
     """, unsafe_allow_html=True)
     st.markdown("""
